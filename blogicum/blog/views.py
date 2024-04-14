@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 posts = [
     {
         'id': 0,
@@ -43,8 +44,6 @@ posts = [
     },
 ]
 
-
-# Create your views here.
 posts_id = {post['id']: post for post in posts}
 
 
