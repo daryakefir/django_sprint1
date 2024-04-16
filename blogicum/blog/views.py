@@ -57,7 +57,9 @@ def post_detail(request, post_id):
     post = post_id_dict.get(post_id)
     if post is None:
         raise Http404('Пост не найден')
-    return render(request, 'blog/detail.html', {'post': post})
+    template = 'blog/detail.html'
+    context = {'post': post}
+    return render(request, template, context)
 
 
 def category_posts(request, category_slug):
